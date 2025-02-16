@@ -1,10 +1,10 @@
-Ivana Moura, ivana.moura@example.com, Brazil
-Scarlett Kumar, scarlett.kumar@example.com, New Zealand
-Natan Flø, natan.flo@example.com, Norway
-Brankica Radanović, brankica.radanovic@example.com, Serbia
-Adem Erkekli, adem.erkekli@example.com, Turkey
-Darin Bøhler, darin.bohler@example.com, Norway
-Bradley Mason, bradley.mason@example.com, United Kingdom
-Alexis Roy, alexis.roy@example.com, Canada
-Yashika Babu, yashika.babu@example.com, India
-Jasmin Nicolas, jasmin.nicolas@example.com, Switzerland
+Carrie Adams, carrie.adams@example.com, United States
+Donna Gardner, donna.gardner@example.com, United Kingdom
+Cícera Nunes, cicera.nunes@example.com, Brazil
+Eileen Harper, eileen.harper@example.com, Australia
+Eckhart Freiberg, eckhart.freiberg@example.com, Germany
+Carlos Román, carlos.roman@example.com, Spain
+Marte Konradsen, marte.konradsen@example.com, Norway
+Úrsula Arevalo, ursula.arevalo@example.com, Mexico
+Faust Maslyak, faust.maslyak@example.com, Ukraine
+Erle Mauseth, erle.mauseth@example.com, Norway

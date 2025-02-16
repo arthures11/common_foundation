@@ -61,7 +61,6 @@ def populate_data(file_path, count=10):
                 file.write(f"{name}, {email}, {country}\n")
 
         print(f"File '{file_path}' has been populated with {count} random users.")
-        log_execution_time("Populating data", start_time)
 
     except requests.RequestException as e:
         print(f"Error fetching data: {e}")
