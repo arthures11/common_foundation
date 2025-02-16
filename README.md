@@ -31,14 +31,6 @@ output:
 [2025-02-17 00:41:34] Task Searching for 'iv' completed in 0.000330 seconds.
 ```
 
-example result using `python main.py -s iv` or `python main.py --search iv`:
-
-output:
-```
-1: Ivana Moura, ivana.moura@example.com, Brazil
-[2025-02-17 00:41:34] Task Searching for 'iv' completed in 0.000330 seconds.
-```
-
 example result using `python main.py -p` or `python main.py --populate`:
 
 output:
