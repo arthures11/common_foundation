@@ -1,4 +1,5 @@
 import argparse
+import datetime
 import sys
 
 
@@ -34,6 +35,14 @@ def search_keyword(file_path, keyword):
         return None
 
 
+def log_execution_time(task, start_time):
+    """logging execution times"""
+    end_time = datetime.datetime.now()
+    elapsed_time = end_time - start_time
+    print(
+        f"[{end_time.strftime('%Y-%m-%d %H:%M:%S')}] Task {task} completed in {elapsed_time.total_seconds():.6f} seconds.")
+
+
 def main():
     parser = argparse.ArgumentParser(description="Process a text file to count lines or search for a keyword.")
     parser.add_argument("file", help="Path to the text file", default="data.txt", nargs="?")
@@ -41,6 +50,8 @@ def main():
 
     args = parser.parse_args()
     file_path = args.file
+
+    start_time = datetime.datetime.now()
 
     if args.search:
         results = search_keyword(file_path, args.search)
@@ -50,10 +61,12 @@ def main():
                 print(result)
         else:
             print(f"No matches found for '{args.search}'.")
+        log_execution_time(f"Searching for '{args.search}'", start_time)
     else:
         num_lines = count_lines(file_path)
         if num_lines is not None:
             print(f"Total lines: {num_lines}")
+        log_execution_time("Counting lines", start_time)
 
 
 # program will count data.txt lines, unless search keyword is given as a param
