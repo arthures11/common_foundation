@@ -1,3 +1,4 @@
+import argparse
 import sys
 
 
@@ -33,21 +34,28 @@ def search_keyword(file_path, keyword):
         return None
 
 
-# program will count data.txt lines, unless search keyword is given as a param
+def main():
+    parser = argparse.ArgumentParser(description="Process a text file to count lines or search for a keyword.")
+    parser.add_argument("file", help="Path to the text file", default="data.txt", nargs="?")
+    parser.add_argument("-s", "--search", help="Keyword to search for in the file", metavar="KEYWORD")
 
-if __name__ == "__main__":
-    file_path = "data.txt"
+    args = parser.parse_args()
+    file_path = args.file
 
-    if len(sys.argv) == 1:
-        num_lines = count_lines(file_path)
-        if num_lines is not None:
-            print(f"Total lines: {num_lines}")
-    elif len(sys.argv) == 2:
-        keyword = sys.argv[1]
-        results = search_keyword(file_path, keyword)
+    if args.search:
+        results = search_keyword(file_path, args.search)
         if results:
-            print(f"Lines containing '{keyword}':")
+            print(f"Lines containing '{args.search}':")
             for result in results:
                 print(result)
         else:
-            print(f"No matches found for '{keyword}'.")
+            print(f"No matches found for '{args.search}'.")
+    else:
+        num_lines = count_lines(file_path)
+        if num_lines is not None:
+            print(f"Total lines: {num_lines}")
+
+
+# program will count data.txt lines, unless search keyword is given as a param
+if __name__ == "__main__":
+    main()
