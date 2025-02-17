@@ -58,7 +58,7 @@ class APIClient:
             response = requests.get(url)
             response.raise_for_status()
             return response.json()
-        except requests.RequestException as e:
+        except Exception as e:
             print(f"Error fetching data: {e}")
             return None
 
