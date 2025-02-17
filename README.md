@@ -39,3 +39,17 @@ output:
 File 'data.txt' has been populated with 10 random users.
 [2025-02-17 00:46:37] Task Populating new data to file 'data.txt' completed in 0.194287 seconds.
 ```
+
+
+for tests, run: `pytest -v` or `pytest`, example output:
+```
+plugins: mock-3.14.0
+collected 6 items
+
+tests/test_api_client.py::test_fetch_random_users_success PASSED
+tests/test_api_client.py::test_fetch_random_users_failure PASSED
+tests/test_file_manager.py::test_count_lines PASSED
+tests/test_file_manager.py::test_search_keyword_found PASSED 
+tests/test_file_manager.py::test_search_keyword_not_found PASSED
+tests/test_file_manager.py::test_write_data PASSED   
+```
